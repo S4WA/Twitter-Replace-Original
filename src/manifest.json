@@ -1,0 +1,25 @@
+{
+	"manifest_version": 2,
+	"name": "Twitter Replace Original",
+	"description": "ツイートの画像を元のサイズの画像に置き換えます。",
+	"version": "1.0.0",
+	"homepage_url": "https://github.com/S4WA/Twitter-Replace-Original",
+	"content_scripts": [
+		{
+			"all_frames": true,
+			"js": [
+				"twitter.js"
+			],
+			"matches": [ "*://twitter.com/*" ],
+			"run_at": "document_end"
+		},
+		{
+			"all_frames": true,
+			"js": [
+				"tweetdeck.js"
+			],
+			"matches": [ "*://tweetdeck.twitter.com/*" ],
+			"run_at": "document_end"
+		}
+	]
+}
